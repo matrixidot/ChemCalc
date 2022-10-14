@@ -27,7 +27,7 @@
                             <transformers>
                                 <transformer implementation=
                                                      "org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>Main</mainClass>
+                                    <mainClass>me.matrixidot.chemcalc.Main</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

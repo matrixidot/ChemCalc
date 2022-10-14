@@ -1,38 +1,42 @@
+package me.matrixidot.chemcalc;
+
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Main {
+public class CalcMolarMass {
     public HashMap<String, Double> elements = new HashMap<>();
+    public CalcMolarMass() {
 
-    public static void main(String[] args) {
-        Main main = new Main();
+    }
+    public void init() {
         Scanner sc = new Scanner(System.in);
         System.out.println("If your compound contains parenthesis like (C2H3)2 then distribute the 2 (in this case) across the elements inside and then enter them");
         System.out.println("(C2H3)2 -> C4H6");
         System.out.println("Enter compound as a comma seperated list, Ex: C4H6 -> C4,H6");
-        main.parseCompoundAndWeights(sc.nextLine());
-
+        parseCompoundAndWeights(sc.nextLine());
     }
-
     /*
      * Splits the string into an array of strings
      * Each element in the array can have a number attached to it indicating the amount of that element in the compound
      * This then calls the API code to fetch the element's weight and then finally print out the hashMap with the Elements and their total Weight
      */
-    public void parseCompoundAndWeights(String compound) {
+    public double parseCompoundAndWeights(String compound) {
         StringBuilder sb = new StringBuilder();
         String[] arr = compound.split(",");
         for (String s : arr) {
             sendRequestAndParseData(s, IfRepeatGetRepeats(s));
             sb.append(s);
         }
-        System.out.println("The molar mass of: " + sb + " = " + sum());
+        double sum = sum();
+        System.out.println("The molar mass of: " + sb + " = " + sum);
+        return sum;
     }
 
     private double sum() {
@@ -118,5 +122,6 @@ public class Main {
         response = sb.toString();
         return response;
     }
+
 
 }
