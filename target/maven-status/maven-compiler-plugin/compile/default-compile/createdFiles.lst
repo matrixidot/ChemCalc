@@ -1,1 +1,11 @@
-Main.class
+me\matrixidot\chemcalc\convert\ConvVolume2.class
+me\matrixidot\chemcalc\calculate\CalcMoles2Particles.class
+me\matrixidot\chemcalc\calculate\CalcMoles2Volume.class
+me\matrixidot\chemcalc\calculate\CalcParticles2Moles.class
+me\matrixidot\chemcalc\convert\ConvParticles2.class
+me\matrixidot\chemcalc\Main.class
+me\matrixidot\chemcalc\calculate\CalcGrams2Moles.class
+me\matrixidot\chemcalc\calculate\CalcMoles2Grams.class
+me\matrixidot\chemcalc\calculate\CalcVolume2Moles.class
+me\matrixidot\chemcalc\CalcMolarMass.class
+me\matrixidot\chemcalc\convert\ConvGrams2.class

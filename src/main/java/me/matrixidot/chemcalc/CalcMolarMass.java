@@ -12,11 +12,6 @@ import java.util.Scanner;
 
 
 public class CalcMolarMass {
-
-public class Main {
-    // TODO: Refactor this code into a different class called CalcWeight instead of bloating main class.
-    // TODO: Add features for converting into moles, particles, and molar volume
-
     public HashMap<String, Double> elements = new HashMap<>();
     public CalcMolarMass() {
 
@@ -128,6 +123,4 @@ public class Main {
         response = sb.toString();
         return response;
     }
-
-
 }
